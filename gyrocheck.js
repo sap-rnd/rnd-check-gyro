@@ -27,10 +27,12 @@ document.addEventListener("DOMContentLoaded", function () {
                     resultDiv.innerHTML = "Your device has a gyroscope.";
                 } else {
                     resultDiv.innerHTML = "Your device does not seem to have a gyroscope.";
+                    alert("You need to enable Motion Sensor in your browser's site settings.");
                 }
             }, { once: true });
         } else {
             resultDiv.innerHTML = "Your browser does not support DeviceOrientationEvent.";
+            alert("You need to enable Motion Sensor in your browser's site settings.");
         }
 
         // Check if DeviceMotionEvent is supported
