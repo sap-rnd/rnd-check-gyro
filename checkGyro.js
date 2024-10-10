@@ -46,7 +46,7 @@ function checkGyroscope()
         {
             if (event.alpha !== null || event.beta !== null || event.gamma !== null) 
             {
-                
+                alert("deviceorientation found.");
             } 
             else 
                 alert("You need to enable Motion Sensor in your browser's site settings.");
@@ -65,7 +65,7 @@ function checkGyroscope()
         {
             if (event.rotationRate && (event.rotationRate.alpha || event.rotationRate.beta || event.rotationRate.gamma)) 
             {
-
+                alert("devicemotion found.");
             } 
             else 
                 alert("You need to enable Motion Sensor in your browser's site settings.");
