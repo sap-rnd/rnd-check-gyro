@@ -51,7 +51,7 @@ function checkGyroscope()
             else 
                 alert("You need to enable Motion Sensor in your browser's site settings.");
 
-            window.addEventListener('devicemotion', window.doc_, false);
+            window.removeEventListener('devicemotion', window.doc_, false);
 
         }, false);
     } 
@@ -72,7 +72,7 @@ function checkGyroscope()
             else 
                 alert("You need to enable Motion Sensor in your browser's site settings.");
 
-            window.addEventListener('devicemotion', window.dmc_, false);
+            window.removeEventListener('devicemotion', window.dmc_, false);
             
         }, false );
     }
