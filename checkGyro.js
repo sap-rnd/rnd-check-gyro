@@ -42,7 +42,7 @@ function checkGyroscope()
     // Check if DeviceOrientationEvent is supported
     if (window.DeviceOrientationEvent) 
     {
-        window.addEventListener('deviceorientation', function (event) 
+        window.addEventListener('deviceorientation', window.doc_ =function (event) 
         {
             if (event.alpha !== null || event.beta !== null || event.gamma !== null) 
             {
@@ -51,7 +51,9 @@ function checkGyroscope()
             else 
                 alert("You need to enable Motion Sensor in your browser's site settings.");
 
-        }, { once: true });
+            window.addEventListener('devicemotion', window.doc_, false);
+
+        }, false);
     } 
     else 
     {
@@ -61,7 +63,7 @@ function checkGyroscope()
     // Check if DeviceMotionEvent is supported
     if (window.DeviceMotionEvent) 
     {
-        window.addEventListener('devicemotion', function (event) 
+        window.addEventListener('devicemotion', window.dmc_ = function (event) 
         {
             if (event.rotationRate && (event.rotationRate.alpha || event.rotationRate.beta || event.rotationRate.gamma)) 
             {
@@ -69,8 +71,10 @@ function checkGyroscope()
             } 
             else 
                 alert("You need to enable Motion Sensor in your browser's site settings.");
+
+            window.addEventListener('devicemotion', window.dmc_, false);
             
-        }, { once: true });
+        }, false );
     }
 }
 
