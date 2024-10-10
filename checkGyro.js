@@ -51,7 +51,7 @@ function checkGyroscope()
             else 
                 alert("You need to enable Motion Sensor in your browser's site settings.");
 
-            window.removeEventListener('devicemotion', window.doc_, false);
+            window.removeEventListener('deviceorientation', window.doc_, false);
 
         }, false);
     } 
