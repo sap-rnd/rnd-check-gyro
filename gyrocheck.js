@@ -2,6 +2,23 @@ document.addEventListener("DOMContentLoaded", function () {
     const resultDiv = document.getElementById('result');
     const enableButton = document.getElementById('enableSensorsButton');
 
+    askPermission() {
+    // feature detect
+    if (typeof DeviceOrientationEvent.requestPermission === "function") {
+      DeviceOrientationEvent.requestPermission()
+        .then(permissionState => {
+          if (permissionState === "granted") {
+            window.addEventListener("deviceorientation", () => {});
+          }
+        })
+        .catch(console.error);
+    } else {
+      alert ("DeviceOrientationEvent.requestPermission not found");
+    }
+  }
+
+  askPermission();
+
     function checkGyroscope() {
         // Check if DeviceOrientationEvent is supported
         if (window.DeviceOrientationEvent) {
