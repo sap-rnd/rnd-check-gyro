@@ -81,6 +81,7 @@ document.addEventListener("DOMContentLoaded", function ()
     // If mobile browser
     if (/android/i.test(userAgent) || /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream)
     {
+        alert("Check Mobile Device");
         checkDevice();
     }
     else
