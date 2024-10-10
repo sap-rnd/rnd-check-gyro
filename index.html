@@ -21,10 +21,20 @@
             border-radius: 8px;
             text-align: center;
         }
+        button {
+            display: none;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <div id="result">Checking for Gyroscope...</div>
+    <button id="enableSensorsButton">Enable Gyroscope Access</button>
     <script src="gyrocheck.js"></script>
 </body>
 </html>
