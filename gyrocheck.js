@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const resultDiv = document.getElementById('result');
     const enableButton = document.getElementById('enableSensorsButton');
 
-    function askPermission() {
+    /*function askPermission() {
     // feature detect
     if (typeof DeviceOrientationEvent.requestPermission === "function") {
       DeviceOrientationEvent.requestPermission()
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  askPermission();
+  askPermission();*/
 
     function checkGyroscope() {
         // Check if DeviceOrientationEvent is supported
